@@ -1,0 +1,90 @@
+.titolo{
+    text-align: center;
+    font-size: 30px;
+    color: #66CCAA;
+    
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+                                                
+}
+.nome{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Anton', sans-serif;
+    color: #66CCAA;
+}
+.voto{
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    color: #66CCAA;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding-bottom: 10%;
+    text-align: right;
+}
+
+  
+  .dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.stella{
+width: 50px;
+float:right;
+padding-bottom: 10%;
+}
+.view{
+    font-size: 30px;
+    color: #66CCAA;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.viewimg{
+    width: 50px;
+
+}
+.lingua{
+    font-size: 30px;
+    color: #66CCAA;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
+.linguaOG{
+
+    width: 50px;
+
+}
+
+.datarilascio{
+    font-size: 25px;
+    color: #66CCAA;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.invisibile{
+    display:none;
+}
+.nomeFilm{
+    text-align: center;
+    color: #66CCAA;
+    font-size: 30px;
+
+}
+.nomedesc{
+    color: #66CCAA;
+    font-size: 25px;
+}
+.nomess{
+    color: #66CCAA;
+    font-size: 25px;
+}
+.rilascio{
+      color: #66CCAA;
+      text-align: left;
+
+}

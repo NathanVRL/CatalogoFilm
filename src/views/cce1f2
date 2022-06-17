@@ -1,0 +1,85 @@
+<template>
+
+
+  <form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search " v-model="nome">
+  <a class="btn btn-outline-success my-2 my-sm-0 colbottone" type="submit" @click="ricerca">cerca</a>
+  </form>
+
+<div class="row" >
+<div class="col-sm-4"
+v-for="movie in movies" 
+   :key="movie.id"
+>
+  <div class="card">
+    <div class="card-body">      
+      <img :src=" image_path(movie.poster_path)" class="card-img-top">
+      <h5 class="card-title">{{movie.original_title}}</h5>
+      
+       <router-link 
+          :key="movie.id"
+          :to="{name:'movie.show',params:{id:movie.id}}" class="centra1">
+         <div class="centra">
+      <button type="button" class=" botton"  v-on:click="newGP()">mostra altro</button>
+      </div>
+      </router-link>
+
+    </div>
+  </div>
+</div>
+</div>
+
+</template>
+<script >   
+
+export default{
+
+  data(){ 
+
+          
+          return{
+                api_key:'6f9286d54de4891ea7a5c91779e09786',
+                language:'it-IT',
+                movies: {},
+                page:1,
+                nome:''
+
+          }
+      },
+      computed: {
+      },
+      methods:{
+
+        async getpost() 
+        { 
+           console.log(this.$route.query.nome)
+            return await fetch('https://api.themoviedb.org/3/search/movie?api_key='+this.api_key+'&language='+this.language+'&page='+this.page+'&query='+this.nome)
+            .then(res =>res.json())  
+            .then(data=>{
+            
+                this.movies=data.results
+                
+           console.log(this.movies)
+            })
+        
+        },
+
+    
+            
+      image_path(poster_path) {
+            return 'https://image.tmdb.org/t/p/original'+poster_path
+
+      }, 
+         
+          ricerca(){
+            this.getpost()
+
+          }
+      },
+          
+          
+
+      
+      
+  }
+</script>
